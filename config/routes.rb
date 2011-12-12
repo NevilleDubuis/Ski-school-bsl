@@ -1,4 +1,10 @@
 SkiSchool::Application.routes.draw do
+  resources :reservations
+
+  resources :instructors
+
+  resources :clients
+
   resources :users
 
   # The priority is based upon order of creation:
