@@ -1,4 +1,6 @@
 SkiSchool::Application.routes.draw do
+  resources :availabilities
+
   resources :reservations
 
   resources :instructors
@@ -6,6 +8,9 @@ SkiSchool::Application.routes.draw do
   resources :clients
 
   resources :users
+  
+  match 'calendars/:start_date/:end_date' => 'calendars#index', :as => :calendars
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
