@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111212220500) do
+ActiveRecord::Schema.define(:version => 20111215133804) do
 
   create_table "availabilities", :force => true do |t|
     t.date     "start_date"
@@ -35,6 +35,15 @@ ActiveRecord::Schema.define(:version => 20111212220500) do
     t.datetime "updated_at"
   end
 
+  create_table "lessons", :force => true do |t|
+    t.date     "day"
+    t.time     "start"
+    t.integer  "nhours"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "reservation_id"
+  end
+
   create_table "people", :force => true do |t|
     t.string   "first_name"
     t.string   "second_name"
@@ -49,8 +58,6 @@ ActiveRecord::Schema.define(:version => 20111212220500) do
 
   create_table "reservations", :force => true do |t|
     t.integer  "client_id"
-    t.datetime "start_date"
-    t.datetime "end_date"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

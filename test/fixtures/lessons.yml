@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  day: 2011-12-15
+  start: 2011-12-15 14:34:10
+  nhours: 1
+
+two:
+  day: 2011-12-15
+  start: 2011-12-15 14:34:10
+  nhours: 1

@@ -13,8 +13,6 @@
 <% @reservations.each do |reservation| %>
   <tr>
     <td><%= reservation.client_id %></td>
-    <td><%= reservation.start_date %></td>
-    <td><%= reservation.end_date %></td>
     <td><%= link_to 'Show', reservation %></td>
     <td><%= link_to 'Edit', edit_reservation_path(reservation) %></td>
     <td><%= link_to 'Destroy', reservation, confirm: 'Are you sure?', method: :delete %></td>
