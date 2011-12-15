@@ -5,7 +5,6 @@ class AvailabilitiesController < ApplicationController
     @availabilities = Availability.all
 
     respond_to do |format|
-      format.html # index.html.erb
       format.json { render json: @availabilities }
     end
   end
@@ -16,7 +15,6 @@ class AvailabilitiesController < ApplicationController
     @availability = Availability.find(params[:id])
 
     respond_to do |format|
-      format.html # show.html.erb
       format.json { render json: @availability }
     end
   end
@@ -27,7 +25,6 @@ class AvailabilitiesController < ApplicationController
     @availability = Availability.new
 
     respond_to do |format|
-      format.html # new.html.erb
       format.json { render json: @availability }
     end
   end
@@ -44,10 +41,8 @@ class AvailabilitiesController < ApplicationController
 
     respond_to do |format|
       if @availability.save
-        format.html { redirect_to @availability, notice: 'Availability was successfully created.' }
         format.json { render json: @availability, status: :created, location: @availability }
       else
-        format.html { render action: "new" }
         format.json { render json: @availability.errors, status: :unprocessable_entity }
       end
     end
@@ -60,10 +55,8 @@ class AvailabilitiesController < ApplicationController
 
     respond_to do |format|
       if @availability.update_attributes(params[:availability])
-        format.html { redirect_to @availability, notice: 'Availability was successfully updated.' }
         format.json { head :ok }
       else
-        format.html { render action: "edit" }
         format.json { render json: @availability.errors, status: :unprocessable_entity }
       end
     end
@@ -76,7 +69,6 @@ class AvailabilitiesController < ApplicationController
     @availability.destroy
 
     respond_to do |format|
-      format.html { redirect_to availabilities_url }
       format.json { head :ok }
     end
   end
