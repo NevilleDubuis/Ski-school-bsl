@@ -1,7 +1,8 @@
 xml.instruct!
 xml.dates do
 	@calendar.dates.each do |date| 
-		xml.date(:day => date) do
+		xml.day do
+			xml.date date
 			start_day = date.to_datetime
 			finish_day = start_day.end_of_day
 			available_hours = @calendar.lessons_available.select{|k,v| (k > start_day && k < finish_day)}
