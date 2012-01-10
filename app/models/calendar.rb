@@ -1,6 +1,6 @@
 class Calendar 
-  attr_accessor :lessons_available,
-  
+  attr_accessor :lessons_available  
+
   def initialize (start_date, end_date)
     dates = []
     date = start_date.to_date
