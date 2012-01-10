@@ -9,7 +9,7 @@ class Calendar
       date = date + 1.day
     end
     
-    lessons_temp = {}
+    lessons_temp = []
     dates.each do |date|
       possible = Availability.where("start_date <= :date AND end_date >= :date", {:date => date}).count
       booked = Lesson.where("day = :date", {:date => date})
@@ -26,7 +26,7 @@ class Calendar
             lessons -= 1
           end
         end
-        lessons_temp[day] = lessons 
+        lessons_temp.push({"date" => day, "available" => lessons}) 
         day = day +1.hour 
       end
       @lessons_available = lessons_temp

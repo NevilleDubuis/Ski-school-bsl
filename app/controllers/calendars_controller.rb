@@ -5,7 +5,7 @@ class CalendarsController < ApplicationController
   def index
     @calendar = Calendar.new(params[:start_date], params[:end_date]) 
     respond_to do |format|
-      format.json { render json: @calendar }
+      format.json { render json: @calendar.lessons_available }
     end
   end
 end
