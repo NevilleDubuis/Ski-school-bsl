@@ -1,16 +1,16 @@
 class Calendar 
-  attr_accessor :lessons_available, :dates  
+  attr_accessor :lessons_available  
 
   def initialize (start_date, end_date)
-    @dates = []
+    dates = []
     date = start_date.to_date
     until date == end_date.to_date
-      @dates.push date
+      dates.push date
       date = date + 1.day
     end
     
     lessons_temp = {}
-    @dates.each do |date|
+    dates.each do |date|
       possible = Availability.where("start_date <= :date AND end_date >= :date", {:date => date}).count
       booked = Lesson.where("day = :date", {:date => date})
       day = date.to_datetime + 8.hours
