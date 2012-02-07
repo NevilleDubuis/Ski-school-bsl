@@ -1,10 +1,3 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
 Rake::Task['db:drop'].invoke
 Rake::Task['db:create'].invoke
 Rake::Task['db:migrate'].invoke
@@ -27,24 +20,24 @@ Reservation.create(client_id: 3)
 Reservation.create(client_id: 3)
 Reservation.create(client_id: 4)
 
-Lesson.create(day: "2012-01-09", start: "08:00:00", nhours: 8, reservation_id: 1 )
-Lesson.create(day: "2012-01-10", start: "08:00:00", nhours: 8, reservation_id: 1 )
-Lesson.create(day: "2012-01-11", start: "08:00:00", nhours: 8, reservation_id: 1 )
-Lesson.create(day: "2012-01-12", start: "08:00:00", nhours: 8, reservation_id: 1 )
-Lesson.create(day: "2012-01-13", start: "08:00:00", nhours: 8, reservation_id: 1 )
+Lesson.create(day: "2012-01-09", start: "08:00:00", nhours: 9, reservation_id: 1 )
+Lesson.create(day: "2012-01-10", start: "08:00:00", nhours: 9, reservation_id: 1 )
+Lesson.create(day: "2012-01-11", start: "08:00:00", nhours: 9, reservation_id: 1 )
+Lesson.create(day: "2012-01-12", start: "08:00:00", nhours: 9, reservation_id: 1 )
+Lesson.create(day: "2012-01-13", start: "08:00:00", nhours: 9, reservation_id: 1 )
 
-Lesson.create(day: "2012-02-13", start: "08:00:00", nhours: 8, reservation_id: 2 )
-Lesson.create(day: "2012-02-14", start: "08:00:00", nhours: 8, reservation_id: 2 )
-Lesson.create(day: "2012-02-15", start: "08:00:00", nhours: 8, reservation_id: 2 )
-Lesson.create(day: "2012-02-16", start: "08:00:00", nhours: 8, reservation_id: 2 )
-Lesson.create(day: "2012-02-17", start: "08:00:00", nhours: 8, reservation_id: 2 )
+Lesson.create(day: "2012-02-13", start: "08:00:00", nhours: 9, reservation_id: 2 )
+Lesson.create(day: "2012-02-14", start: "08:00:00", nhours: 9, reservation_id: 2 )
+Lesson.create(day: "2012-02-15", start: "08:00:00", nhours: 9, reservation_id: 2 )
+Lesson.create(day: "2012-02-16", start: "08:00:00", nhours: 9, reservation_id: 2 )
+Lesson.create(day: "2012-02-17", start: "08:00:00", nhours: 9, reservation_id: 2 )
 Lesson.create(day: "2012-02-18", start: "08:00:00", nhours: 4, reservation_id: 2 )
 
-Lesson.create(day: "2012-02-13", start: "08:00:00", nhours: 8, reservation_id: 2 )
-Lesson.create(day: "2012-02-14", start: "08:00:00", nhours: 8, reservation_id: 2 )
-Lesson.create(day: "2012-02-15", start: "08:00:00", nhours: 8, reservation_id: 2 )
-Lesson.create(day: "2012-02-16", start: "08:00:00", nhours: 8, reservation_id: 2 )
-Lesson.create(day: "2012-02-17", start: "08:00:00", nhours: 8, reservation_id: 2 )
+Lesson.create(day: "2012-02-13", start: "08:00:00", nhours: 9, reservation_id: 2 )
+Lesson.create(day: "2012-02-14", start: "08:00:00", nhours: 9, reservation_id: 2 )
+Lesson.create(day: "2012-02-15", start: "08:00:00", nhours: 9, reservation_id: 2 )
+Lesson.create(day: "2012-02-16", start: "08:00:00", nhours: 9, reservation_id: 2 )
+Lesson.create(day: "2012-02-17", start: "08:00:00", nhours: 9, reservation_id: 2 )
 
 Lesson.create(day: "2012-02-12", start: "12:00:00", nhours: 4, reservation_id: 3 )
 Lesson.create(day: "2012-03-13", start: "12:00:00", nhours: 4, reservation_id: 3 )
