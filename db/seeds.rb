@@ -18,7 +18,7 @@ Instructor.create(person_id: 1)
 Instructor.create(person_id: 2)
 
 Availability.create(start_date: "2012-01-01", end_date: "2012-05-31", instructor_id: 1)
-Availability.create(start_date: "2012-02-01", end_date: "2012-04-31", instructor_id: 2)
+Availability.create(start_date: "2012-02-01", end_date: "2012-04-30", instructor_id: 2)
 
 Client.create(login: "me", password:"test", person_id: 3)
 Client.create(login: "me_again", password:"test", person_id: 4)
