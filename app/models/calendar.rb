@@ -26,7 +26,9 @@ class Calendar
             lessons -= 1
           end
         end
-        lessons_temp.push({"date" => day, "available" => lessons}) 
+        if lessons > 0 
+          lessons_temp.push({"date" => day, "available" => lessons}) 
+        end
         day = day +1.hour 
       end
       @lessons_available = lessons_temp
