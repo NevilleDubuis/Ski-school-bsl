@@ -1,4 +1,6 @@
 SkiSchool::Application.routes.draw do
+  resources :temporaries
+
   resources :lessons
 
   resources :availabilities

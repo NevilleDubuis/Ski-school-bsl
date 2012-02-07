@@ -1,0 +1,23 @@
+<h1>Listing temporaries</h1>
+
+<table>
+  <tr>
+    <th>Client</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @temporaries.each do |temporary| %>
+  <tr>
+    <td><%= temporary.client_id %></td>
+    <td><%= link_to 'Show', temporary %></td>
+    <td><%= link_to 'Edit', edit_temporary_path(temporary) %></td>
+    <td><%= link_to 'Destroy', temporary, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Temporary', new_temporary_path %>
