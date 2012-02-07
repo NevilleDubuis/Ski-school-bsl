@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120203083243) do
+ActiveRecord::Schema.define(:version => 20120203085451) do
 
   create_table "availabilities", :force => true do |t|
     t.date     "start_date"
@@ -41,7 +41,7 @@ ActiveRecord::Schema.define(:version => 20120203083243) do
     t.integer  "nhours"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "reservation_id"
+    t.integer  "type_id"
     t.string   "type"
   end
 
