@@ -41,8 +41,8 @@ ActiveRecord::Schema.define(:version => 20120203085451) do
     t.integer  "nhours"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "type_id"
-    t.string   "type"
+    t.integer  "kind_id"
+    t.string   "kind"
   end
 
   create_table "people", :force => true do |t|
